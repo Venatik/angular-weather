@@ -1,7 +1,21 @@
 <div class="container">
     <div class="search-box">
-        <input type="text" #cityInput placeholder="Enter City Name" (keyup.enter)="searchCity(cityInput.value)">
+        <input type="text" #cityInput placeholder="Enter City Name" (keyup.enter)="searchCity(cityInput.value)"
+            (input)="onInput($event)">
         <button (click)="searchCity(cityInput.value)">Search</button>
+
+        @if (suggestions.length > 0) {
+        <div class="suggestions">
+            @for (city of suggestions; track city.lat) {
+            <div class="suggestion-item" (click)="selectCity(city)">
+                {{ city.name }}, {{ city.country }}
+                @if (city.state) {
+                , {{ city.state }}
+                }
+            </div>
+            }
+        </div>
+        }
     </div>
 
     <div class="weather-info">

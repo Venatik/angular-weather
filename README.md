@@ -18,6 +18,12 @@ A simple weather application built with Angular that displays current weather co
 - OpenWeatherMap API
 - Angular Material
 
+## Environment Setup
+
+1. Copy `src/environments/environment.example.ts` to `environment.ts`
+2. Add your OpenWeatherMap API key
+3. For production, copy to `environment.prod.ts`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

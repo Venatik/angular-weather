@@ -15,4 +15,10 @@ export class WeatherService {
       `${environment.weatherApiUrl}/weather?q=${city}&appid=${environment.weatherApiKey}&units=metric`
     );
   }
+
+  searchCities(query: string): Observable<any> {
+    return this.http.get(
+      `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${environment.weatherApiKey}`
+    );
+  }
 }
