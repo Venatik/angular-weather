@@ -1,5 +1,7 @@
 # Angular Weather App
 
+https://github.com/Venatik/angular-weather
+
 A simple weather application built with Angular that displays current weather conditions for any city. Uses the OpenWeatherMap API to fetch real-time weather data.
 
 ## Features
